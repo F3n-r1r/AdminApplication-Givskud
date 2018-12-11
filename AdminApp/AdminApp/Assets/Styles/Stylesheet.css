@@ -1,0 +1,171 @@
+﻿html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/**/
+/*CSS FOR NAVIGATION*/
+/**/
+.navbar {
+    background-color: #97BE0D;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.navListContainer {
+    display: flex;
+    list-style: none;
+}
+.navItem {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 15px;
+}
+/**/
+/*CSS FOR NAVIGATION END*/
+/**/
+
+/**/
+/*CSS FOR HOME PAGE*/
+/**/
+.homeContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.textFocus {
+    color: red;
+}
+/**/
+/*CSS FOR HOME PAGE END*/
+/**/
+
+
+
+
+
+
+
+
+/**/
+/*CSS FOR LAYOUT OF NEWS AND EVENTS*/
+/**/
+h2 {
+    text-align: center;
+}
+.row {
+    display: flex;
+    height: calc(100% - 60px);
+}
+@media only screen and (max-width: 600px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.column {
+    flex: 50%;
+    padding: 10px;
+}
+/**/
+/*CSS FOR LAYOUT OF NEWS AND EVENTS END*/
+/**/
+
+/**/
+/*CSS FOR THE FORM */
+/**/
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: #97BE0D;
+    padding: 20px;
+}
+.formLabel {
+    color: #ffffff;
+    padding-top: 10px;
+}
+.titleInput {
+    height: 40px;
+}
+.bodyTextInput {
+    height: 100px;
+}
+.submit {
+    margin-top: 20px;
+    background-color: #5b9744;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+/**/
+/*CSS FOR THE FORM END*/
+/**/
+
+/**/
+/*CSS FOR THE LIST */
+/**/
+.list {
+    height: calc(100% - 60px);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.textContainer {
+    flex: 75%;
+}
+.deleteContainer {
+    flex: 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.list-item {
+    display: flex;
+    background-color: #97BE0D;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid #fff;
+    margin: 1em 0;
+    padding: 0;
+}
+.titelLabel {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.bodyTextLabel {
+    color: #ffffff;
+    font-size: 1.2em;
+}
+.pageId {
+    color: #dc1f28;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.deleteBtn {
+    background-color: #5b9744;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+/**/
+/*CSS FOR THE LIST END */
+/**/

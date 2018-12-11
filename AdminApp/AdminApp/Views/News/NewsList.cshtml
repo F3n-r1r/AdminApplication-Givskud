@@ -1,0 +1,25 @@
+﻿@*Partial View for displaying a list of the news*@
+
+@model IEnumerable<AdminApp.Models.News>
+
+<div class="list">
+    @foreach (var item in Model)
+    {
+        <dív class="list-item">
+            <div class="textContainer">
+                <div class="titelLabel">@Html.DisplayFor(modelItem => item.Title)</div>
+                <hr />
+                <div class="bodyTextLabel">@Html.DisplayFor(modelItem => item.BodyText)</div>
+            </div>
+
+            <div class="deleteContainer">
+                <p class="pageId">Id: @Html.DisplayFor(modelItem => item.Id)</p>
+                @using (Html.BeginForm("DeleteNews", "News", new { id = item.Id }, FormMethod.Post, null))
+                {
+                    <input class="deleteBtn" type="submit" name="DeleteButton" value="Delete" />
+                }
+            </div>
+        </dív>
+
+    }
+</div>

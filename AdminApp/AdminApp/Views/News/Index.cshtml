@@ -1,0 +1,13 @@
+﻿@*Index for News. Displays the list and the form*@
+
+
+<div class="row">
+    <div class="column">
+        <h2>Post News</h2>
+        @Html.Partial("PostNews")
+    </div>
+    <div class="column">
+        <h2>List of News</h2>
+        @Html.Action("GetNews", "News")
+    </div>
+</div>

@@ -1,0 +1,15 @@
+﻿@*Partial View For Posting News*@
+
+@model AdminApp.Models.News
+
+
+    @using (Html.BeginForm("PostNews", "News", FormMethod.Post, new { @class = "form" }))
+    {
+        @Html.LabelFor(model => model.Title, new { @class = "formLabel" })
+        @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "titleInput" } })
+
+        @Html.LabelFor(model => model.BodyText, new { @class = "formLabel" })
+        @Html.EditorFor(model => model.BodyText, new { htmlAttributes = new { @class = "bodyTextInput" } })
+
+        <input class="submit" type="submit" value="Post" />
+    }

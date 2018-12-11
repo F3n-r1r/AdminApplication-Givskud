@@ -1,0 +1,14 @@
+﻿@*Index for Events. Displays the list and the form*@
+
+
+<div class="row">
+    <div class="column">
+        <h2>Post Events</h2>
+        @Html.Partial("PostEvents")
+    </div>
+    <div class="column">
+        <h2>List of Events</h2>
+        @Html.Action("GetEvents", "Events")
+    </div>
+</div>
+

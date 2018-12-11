@@ -1,0 +1,16 @@
+﻿@*Partial View For Posting Events*@
+
+
+@model AdminApp.Models.Event
+
+
+@using (Html.BeginForm("PostEvents", "Events", FormMethod.Post, new { @class = "form" }))
+{
+    @Html.LabelFor(model => model.Title, new { @class = "formLabel" }) @*// Needs to be changed*@
+    @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "titleInput" } }) @*// Needs to be changed*@
+
+    @Html.LabelFor(model => model.BodyText, new { @class = "formLabel" }) @*// Needs to be changed*@
+    @Html.EditorFor(model => model.BodyText, new { htmlAttributes = new { @class = "bodyTextInput" } }) @*// Needs to be changed*@
+
+    <input class="submit" type="submit" value="Post" />
+}
