@@ -9,7 +9,8 @@
             <div class="textContainer">
                 <div class="titelLabel">@Html.DisplayFor(modelItem => item.Title)</div>
                 <hr />
-                <div class="bodyTextLabel">@Html.DisplayFor(modelItem => item.BodyText)</div>
+                <div class="bodyTextLabel">@Html.Raw(item.BodyText)</div> @*To render the html from the rich text editor used "Raw"*@
+                @*<div class="bodyTextLabel">@Html.DisplayFor(modelItem => item.BodyText)</div>*@
             </div>
 
             <div class="deleteContainer">

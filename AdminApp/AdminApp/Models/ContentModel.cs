@@ -10,9 +10,11 @@ namespace AdminApp.Models
     {
         public int Id { get; set; }
         [Display(Name = "Headline")]
+        [Required]
         public string Title { get; set; }
         [DataType(DataType.MultilineText)] // Make it a textare in the form
         [Display(Name = "Message")]
+        [Required]
         public string BodyText { get; set; }
     }
 }

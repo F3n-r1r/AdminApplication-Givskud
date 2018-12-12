@@ -29,7 +29,7 @@ namespace AdminApp.Controllers
                 new KeyValuePair<string, string>("bodyText", news.BodyText)
             });
             content.Headers.ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded");
-            HttpResponseMessage response =  await client.PostAsync("http://localhost:49880/umbraco/api/utest/postnews", content);
+            HttpResponseMessage response =  await client.PostAsync("http://localhost:53115/umbraco/api/news/postnews", content);
             Response.Redirect("/News");
 
             return response;
@@ -46,7 +46,7 @@ namespace AdminApp.Controllers
                 new KeyValuePair<string, string>("id", identifier)
             });
             content.Headers.ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded");
-            HttpResponseMessage response = await client.PostAsync("http://localhost:49880/umbraco/api/utest/deletenews", content);
+            HttpResponseMessage response = await client.PostAsync("http://localhost:53115/umbraco/api/news/deletenews", content);
             Response.Redirect("/News");
 
             return response;
@@ -63,9 +63,9 @@ namespace AdminApp.Controllers
             using (var client = new HttpClient())
             {
                 // Url for the api in the visitors application
-                client.BaseAddress = new Uri("http://localhost:49880/umbraco/api/utest/news");
+                client.BaseAddress = new Uri("http://localhost:53115/umbraco/api/news/getnews");
                 //HTTP GET
-                var responseTask = client.GetAsync("news");
+                var responseTask = client.GetAsync("GetNews");
                 responseTask.Wait();
 
                 var result = responseTask.Result;
